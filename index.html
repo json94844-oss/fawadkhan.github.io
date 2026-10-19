@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Open Door Web: Websites for local businesses</title>
+<meta name="description" content="Clean, mobile-friendly websites for local businesses. Flat prices, ready for review in 48 hours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FAFBF8;--ink:#14231C;--muted:#506159;--line:#D6DFD8;--awn:#17724F;--awn2:#CFE8D9;--deep:#17724F;--on-deep:#fff;--yel:#FFD23F;--on-yel:#14231C;--hl:#FFF1BD;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0D1612;--ink:#EAF2ED;--muted:#9CB0A5;--line:#27382F;--awn:#2E9C6E;--awn2:#143024;--deep:#1D4A37;--on-deep:#F2FAF5;--hl:#33300F}}
+:root[data-theme="dark"]{--bg:#0D1612;--ink:#EAF2ED;--muted:#9CB0A5;--line:#27382F;--awn:#2E9C6E;--awn2:#143024;--deep:#1D4A37;--on-deep:#F2FAF5;--hl:#33300F}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 "Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif}
+:focus-visible{outline:3px solid var(--awn);outline-offset:3px}
+.awn{height:40px;background:repeating-linear-gradient(90deg,var(--awn) 0 32px,var(--awn2) 32px 64px);position:relative;margin-bottom:16px}
+.awn::after{content:"";position:absolute;left:0;right:0;top:100%;height:16px;background:inherit;-webkit-mask:radial-gradient(circle at 16px 0,#000 15.5px,transparent 16px) 0 0/32px 16px repeat-x;mask:radial-gradient(circle at 16px 0,#000 15.5px,transparent 16px) 0 0/32px 16px repeat-x}
+.wrap{max-width:880px;margin:0 auto;padding:0 20px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0}
+.logo{font-weight:800;font-size:1.2rem;letter-spacing:-.03em}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:12px;border:2px solid var(--ink);background:var(--yel);color:var(--on-yel);font-weight:800;font-size:1rem;text-decoration:none}
+.btn.alt{background:transparent;color:var(--ink)}
+.btn.sm{min-height:40px;padding:0 14px;font-size:.95rem}
+.hero{padding:36px 0 44px}
+h1{font-size:clamp(2.5rem,11vw,4.6rem);line-height:1;letter-spacing:-.045em;font-weight:800;margin:0 0 18px;max-width:11em}
+.lead{font-size:1.18rem;color:var(--muted);margin:0 0 26px;max-width:32em}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+section{padding:40px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(1.75rem,6.5vw,2.5rem);line-height:1.08;letter-spacing:-.035em;font-weight:800;margin:0 0 10px}
+.sub{color:var(--muted);margin:0 0 26px;max-width:34em}
+dl{margin:20px 0 0}
+.why>div{display:grid;gap:4px 24px;padding:18px 0}
+.why>div+div{border-top:1px solid var(--line)}
+dt{font-weight:800;font-size:1.2rem;letter-spacing:-.02em}
+dd{margin:0;color:var(--muted)}
+.menu{list-style:none;margin:0 0 26px;padding:0}
+.menu li{padding:18px 14px;margin:0 -14px}
+.menu li+li{border-top:1px solid var(--line)}
+.menu .pick{background:var(--hl)}
+.top{display:flex;align-items:baseline;gap:10px}
+.top i{flex:1;border-bottom:2px dotted var(--muted);opacity:.5;transform:translateY(-4px)}
+.top h3{margin:0;font-size:1.3rem;font-weight:800;letter-spacing:-.025em}
+.top b{font-size:1.5rem;font-weight:800;letter-spacing:-.03em;white-space:nowrap;text-align:right}
+.top b small{display:block;font-size:.85rem;font-weight:500;letter-spacing:0;color:var(--muted)}
+.menu p{margin:6px 0 0;color:var(--muted);max-width:34em}
+.menu .pick p{color:var(--ink)}
+.tag{display:inline-block;background:var(--yel);color:var(--on-yel);font-weight:800;font-size:.8rem;padding:3px 10px;border-radius:6px;margin-top:10px}
+.steps{list-style:none;margin:20px 0 0;padding:0;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:3rem 1fr;gap:0 12px;padding:16px 0}
+.steps li+li{border-top:1px solid var(--line)}
+.steps li::before{content:counter(s);grid-row:span 2;font-size:2.4rem;font-weight:800;line-height:1;color:var(--awn)}
+.steps h3{margin:0;font-size:1.2rem;letter-spacing:-.02em}
+.steps p{margin:2px 0 0;color:var(--muted);max-width:34em}
+.final{background:var(--deep);color:var(--on-deep);border-radius:20px;padding:34px 22px;margin:8px 0 40px}
+.final p{margin:0 0 20px;opacity:.9}
+.final .mail{margin:16px 0 0;font-weight:700;word-break:break-all;opacity:1}
+.final .btn.alt{color:var(--on-deep);border-color:var(--on-deep)}
+footer{color:var(--muted);font-size:.9rem;padding:0 0 32px}
+@media(min-width:720px){.why>div{grid-template-columns:1fr 1.7fr;align-items:baseline}}
+</style>
+</head>
+<body>
+<div class="awn"></div>
+<div class="wrap">
+<header><span class="logo" data-brand>Open Door Web</span><a class="btn sm" data-wa href="#contact">WhatsApp me</a></header>
+<main>
+<div class="hero">
+<h1>Your business, online in 48 hours.</h1>
+<p class="lead">I’m Fawad Khan, and I build clean, mobile-friendly websites for local clinics, shops, salons and trades. Customers find you, trust you and call you. One flat price, no tech headaches.</p>
+<div class="cta"><a class="btn" data-wa href="#contact">WhatsApp for a quote</a><a class="btn alt" href="#pricing">See prices</a></div>
+</div>
+
+<section>
+<h2>Made for busy owners</h2>
+<dl class="why">
+<div><dt>Phone-first design</dt><dd>Customers check you out on their phone first, so every site is built for small screens before big ones.</dd></div>
+<div><dt>Flat, upfront prices</dt><dd>You know the full cost before we start. No hourly billing and no surprise invoices.</dd></div>
+<div><dt>Yours to keep</dt><dd>Your site, your domain and your content stay yours, whatever happens next.</dd></div>
+</dl>
+</section>
+
+<section id="pricing">
+<h2>Price list</h2>
+<p class="sub">One-time prices in Pakistani rupees, with approximate US dollar prices. A domain name (about PKR 3,400, or $12, a year) is billed at cost.</p>
+<ul class="menu">
+<li><div class="top"><h3>Starter</h3><i></i><b>PKR 42,000<small>about $149</small></b></div><p>One clean page with call, text and directions buttons, plus your logo, photos and opening hours. Ready for review in 48 hours.</p></li>
+<li class="pick"><div class="top"><h3>Growth</h3><i></i><b>PKR 84,000<small>about $299</small></b></div><p>Up to four pages, Google Business Profile setup, basic search optimization so locals find you, and one round of edits.</p><span class="tag">Most popular</span></li>
+<li><div class="top"><h3>Care plan</h3><i></i><b>PKR 7,000/mo<small>about $25/month</small></b></div><p>Updates to your hours, prices and photos, done within 48 hours. Cancel any time.</p></li>
+</ul>
+<a class="btn" data-wa href="#contact">Ask about a package</a>
+</section>
+
+<section>
+<h2>How it works</h2>
+<ol class="steps">
+<li><h3>Tell me about your business</h3><p>Answer a few quick questions by text or email, and send your logo and photos if you have them.</p></li>
+<li><h3>Review your site</h3><p>You get a private link to your finished site within 48 hours. Tell me what to tweak and I’ll update it.</p></li>
+<li><h3>Go live</h3><p>Once you approve it, I publish the site and help you show up on Google.</p></li>
+</ol>
+</section>
+
+<div class="final" id="contact">
+<h2>Ready to get found?</h2>
+<p>Message me for a free, no-pressure quote.</p>
+<div class="cta"><a class="btn" data-wa href="#contact">WhatsApp me</a><a class="btn alt" data-mail href="#contact">Email me</a></div>
+<p class="mail"><span data-phone>0325 7523657</span><br><span data-email>json94844@gmail.com</span></p>
+</div>
+</main>
+<footer>© 2026 <span data-brand>Open Door Web</span> by Fawad Khan. Websites for local businesses.</footer>
+</div>
+<script>
+const BRAND="Open Door Web",EMAIL="json94844@gmail.com",WA="923257523657",PHONE="0325 7523657";
+document.querySelectorAll("[data-brand]").forEach(e=>e.textContent=BRAND);
+document.querySelectorAll("[data-email]").forEach(e=>e.textContent=EMAIL);
+document.querySelectorAll("[data-mail]").forEach(a=>a.href="mailto:"+EMAIL+"?subject="+encodeURIComponent("Website quote"));
+document.querySelectorAll("[data-wa]").forEach(a=>{a.href="https://wa.me/"+WA+"?text="+encodeURIComponent("Hi, I’d like a quote for a website.");a.target="_blank";a.rel="noopener"});
+document.querySelectorAll("[data-phone]").forEach(e=>e.textContent=PHONE);
+</script>
+</body>
+</html>
